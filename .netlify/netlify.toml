@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/growthgene/그로스진 마케팅/landings/prism-conference"
+publish = "/Users/growthgene/그로스진 마케팅/landings/prysm-conference"
 publishOrigin = "config"
 
 [build.environment]
