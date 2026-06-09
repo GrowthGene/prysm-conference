@@ -17,7 +17,7 @@
     --accent-teal: #3ee8c8;
     --accent-rose: #ff6b9d;
     --text: #e8edf8;
-    --muted: #5a6890;
+    --muted: #7e8cb0;
     --prism1: #ff6b6b; --prism2: #ffa94d; --prism3: #f5c842;
     --prism4: #69db7c; --prism5: #4dabf7; --prism6: #9775fa;
   }
@@ -120,7 +120,7 @@
 
   /* ─── BODY TEXT ─── */
   .body-lead { font-size: 16px; font-weight: 500; line-height: 1.85; margin-bottom: 20px; }
-  .body-text { font-size: 14px; color: #8a9cc8; line-height: 1.95; margin-bottom: 16px; }
+  .body-text { font-size: 15px; color: #9fadd2; line-height: 1.85; margin-bottom: 16px; }
   .body-text:last-child { margin-bottom: 0; }
 
   /* ─── QUOTE ─── */
@@ -145,7 +145,7 @@
   .card:hover { border-color: rgba(78,159,255,0.3); transform: translateY(-2px); }
   .card-icon { font-size: 26px; margin-bottom: 14px; display: block; }
   .card-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-  .card-body { font-size: 13px; color: #8a9cc8; line-height: 1.8; }
+  .card-body { font-size: 14px; color: #9fadd2; line-height: 1.8; }
 
   /* ─── STAT BLOCKS ─── */
   .stat-box {
@@ -168,14 +168,14 @@
     color: var(--accent-blue); flex-shrink: 0;
   }
   .step-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-  .step-text { font-size: 14px; color: #8a9cc8; line-height: 1.85; }
+  .step-text { font-size: 15px; color: #9fadd2; line-height: 1.85; }
 
   /* ─── RESULT CARDS (2-col) ─── */
   .result-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: border-color 0.2s; }
   .result-card:hover { border-color: rgba(62,232,200,0.3); }
   .result-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-family: 'DM Mono', monospace; margin-bottom: 10px; }
   .result-value { font-size: 26px; font-weight: 900; font-family: 'DM Mono', monospace; letter-spacing: -0.03em; color: var(--accent-teal); margin-bottom: 6px; }
-  .result-body { font-size: 13px; color: #8a9cc8; line-height: 1.75; }
+  .result-body { font-size: 13px; color: #9fadd2; line-height: 1.75; }
 
   /* ─── TRIAL INFO ROW ─── */
   .trial-row { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
@@ -188,7 +188,7 @@
   .outcome-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .outcome-list li {
     display: flex; align-items: flex-start; gap: 12px;
-    font-size: 14px; color: #8a9cc8; padding: 14px 18px;
+    font-size: 14px; color: #9fadd2; padding: 14px 18px;
     background: var(--bg); border: 1px solid var(--border); border-radius: 10px; line-height: 1.7;
   }
   .outcome-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-teal); flex-shrink: 0; margin-top: 7px; }
@@ -218,7 +218,7 @@
   .compare-score.low { color: var(--accent-rose); }
   .compare-score.high { color: var(--accent-teal); }
   .compare-items { display: flex; flex-direction: column; gap: 8px; }
-  .compare-item { font-size: 13px; color: #8a9cc8; display: flex; gap: 8px; align-items: center; }
+  .compare-item { font-size: 13px; color: #9fadd2; display: flex; gap: 8px; align-items: center; }
   .compare-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
   .compare-card.low .compare-item::before { background: var(--accent-rose); }
   .compare-card.high .compare-item::before { background: var(--accent-teal); }
@@ -227,7 +227,7 @@
   .damage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .damage-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
   .damage-organ { font-size: 13px; font-weight: 700; color: var(--accent-rose); margin-bottom: 8px; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; }
-  .damage-text { font-size: 13px; color: #8a9cc8; line-height: 1.75; }
+  .damage-text { font-size: 14px; color: #9fadd2; line-height: 1.75; }
 
   /* ─── PHOTO ─── */
   .photo-full { width: 100%; border-radius: 16px; display: block; border: 1px solid var(--border); }
@@ -285,7 +285,7 @@
 
   /* ─── SPEAKER PHOTO (실사진) ─── */
   .speaker-photo-img { width: 100%; height: auto; border-radius: 14px; margin-bottom: 16px; border: 1px solid var(--border); display: block; }
-  .photo-caption { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; text-align: center; margin-top: 10px; line-height: 1.5; }
+  .photo-caption { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; text-align: center; margin-top: 10px; line-height: 1.5; }
 
   /* ─── RESULT GROUPS (임상 결과 재설계) ─── */
   .result-group { margin-bottom: 28px; }
@@ -295,7 +295,7 @@
   .rg-skin .result-group-icon { background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.22); }
   .rg-bio .result-group-icon { background: rgba(62,232,200,0.12); border: 1px solid rgba(62,232,200,0.28); }
   .result-group-title { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
-  .result-group-sub { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 2px; }
+  .result-group-sub { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 2px; }
 
   /* 결과 카드 (트렌드 그래픽 포함) */
   .rc { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px; transition: border-color 0.2s, transform 0.2s; }
@@ -313,7 +313,7 @@
   .tl-col .tl-wk { position: absolute; bottom: -18px; font-size: 9px; color: var(--muted); font-family: 'DM Mono', monospace; }
   .tl-up .tl-bar { background: linear-gradient(to top, rgba(62,232,200,0.2), var(--accent-teal)); }
   .tl-down .tl-bar { background: linear-gradient(to top, rgba(255,107,157,0.2), var(--accent-rose)); }
-  .rc-desc { font-size: 12px; color: #8a9cc8; line-height: 1.7; }
+  .rc-desc { font-size: 13px; color: #9fadd2; line-height: 1.7; }
 
   /* L*a*b* 색상 변화 바 */
   .lab-bar { height: 10px; border-radius: 6px; position: relative; margin: 8px 0 6px; }
@@ -349,7 +349,7 @@
   .batt-card.good { color: var(--accent-teal); } .batt-card.bad { color: var(--accent-rose); }
   .batt-pct { font-size: 22px; font-weight: 900; font-family: 'DM Mono', monospace; line-height: 1; margin-bottom: 4px; }
   .batt-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-  .batt-desc { font-size: 12px; color: #8a9cc8; line-height: 1.6; }
+  .batt-desc { font-size: 12px; color: #9fadd2; line-height: 1.6; }
 
   /* 카로티노이드 효능 아이콘 박스 (damage-card에 아이콘) */
   .damage-icon { font-size: 20px; margin-bottom: 10px; display: block; }
@@ -1124,7 +1124,7 @@
         체내 카로티노이드를 대폭 끌어올리는<br>
         <span class="gold-text">과학적 솔루션이 있습니다</span>
       </h2>
-      <p style="font-size:15px; color:#8a9cc8; line-height:1.9; max-width:560px; margin-bottom:32px;">
+      <p style="font-size:15px; color:#9fadd2; line-height:1.9; max-width:560px; margin-bottom:32px;">
         뉴스킨 파마넥스의 <strong style="color:var(--text);">LifePak® Optimal</strong>은 식물 유래 카로티노이드를 포함한 33가지 영양소를 과학적으로 배합한 제품입니다.
         8주 임상 연구에서 Prysm iO로 측정한 체내 카로티노이드가
         <strong style="color:var(--accent-gold);">4주·8주 모두 유의하게 증가</strong>하는 것이 확인되었습니다.
@@ -1209,7 +1209,7 @@
     인간의 잠재력은 무한합니다.<br>
     <span class="prism-text">과학이 그 길을 밝힙니다.</span>
   </h2>
-  <p style="font-size:15px; color:#8a9cc8; line-height:1.9; max-width:540px; margin:0 auto 40px;">
+  <p style="font-size:15px; color:#9fadd2; line-height:1.9; max-width:540px; margin:0 auto 40px;">
     우리 몸을 올바르게 이해하고 건강하게 관리한다면, 더 건강하고 더 오래, 더 활기차게 살아갈 수 있습니다.
     Prysm iO는 현재 상태를 측정하고, 건강한 행동 변화를 습관으로 만들도록 돕는 도구입니다.
     뉴스킨은 여러분이 자신의 잠재력을 실현하도록 돕고자 합니다.
