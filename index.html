@@ -146,7 +146,7 @@
     transition: border-color 0.2s, transform 0.2s;
   }
   .card:hover { border-color: rgba(217,164,65,0.3); transform: translateY(-2px); }
-  .card-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+  .card-icon { font-size: 24px; margin-bottom: 14px; display: block; color: var(--accent-gold); }
   .card-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
   .card-body { font-size: 14px; color: #9fadd2; line-height: 1.8; }
 
@@ -359,7 +359,7 @@
   .batt-desc { font-size: 12px; color: #9fadd2; line-height: 1.6; }
 
   /* 카로티노이드 효능 아이콘 박스 (damage-card에 아이콘) */
-  .damage-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+  .damage-icon { font-size: 22px; margin-bottom: 10px; display: block; color: var(--accent-rose); }
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 680px) {
@@ -383,6 +383,7 @@
     .gauge-wrap { justify-content: center; }
   }
 </style>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 </head>
 <body>
 
@@ -535,17 +536,17 @@
     <div class="cards-3">
       <div class="card">
         
-        <div class="card-title">눈 건강</div>
+        <span class="card-icon iconify" data-icon="lucide:eye"></span><div class="card-title">눈 건강</div>
         <div class="card-body">시력 보호, 야맹증·안구건조증 예방에 기여. 황반색소 구성 성분으로 눈을 활성산소 손상으로부터 보호합니다.</div>
       </div>
       <div class="card">
         
-        <div class="card-title">뇌 기능</div>
+        <span class="card-icon iconify" data-icon="lucide:brain"></span><div class="card-title">뇌 기능</div>
         <div class="card-body">신경세포 보호 및 인지 기능 유지에 기여. 뇌에서 자유 라디컬로 인한 산화 손상을 억제합니다.</div>
       </div>
       <div class="card">
         
-        <div class="card-title">신체 기능 전반</div>
+        <span class="card-icon iconify" data-icon="lucide:activity"></span><div class="card-title">신체 기능 전반</div>
         <div class="card-body">면역 체계 강화, 피부 장벽과 점막 보호. 강력한 항산화 작용으로 세포 손상을 억제합니다.</div>
       </div>
     </div>
@@ -597,32 +598,32 @@
     <div class="damage-grid">
       <div class="damage-card">
         
-        <div class="damage-organ">심혈관계</div>
+        <span class="damage-icon iconify" data-icon="lucide:heart-pulse"></span><div class="damage-organ">심혈관계</div>
         <div class="damage-text">LDL 산화를 촉진해 심혈관 질환 위험을 높입니다. 산화된 LDL은 염증 반응을 유발하고 동맥 내 플라크 형성을 촉진해 심장과 혈관을 손상시킵니다.</div>
       </div>
       <div class="damage-card">
         
-        <div class="damage-organ">뇌·신경계</div>
+        <span class="damage-icon iconify" data-icon="lucide:brain"></span><div class="damage-organ">뇌·신경계</div>
         <div class="damage-text">신경세포 손상과 베타 아밀로이드 단백질 생성을 증가시켜 신경 퇴행성 질환과 관련될 수 있습니다.</div>
       </div>
       <div class="damage-card">
         
-        <div class="damage-organ">피부</div>
+        <span class="damage-icon iconify" data-icon="lucide:scan-face"></span><div class="damage-organ">피부</div>
         <div class="damage-text">콜라겐과 탄력 섬유를 공격해 피부 처짐과 노화를 유발합니다. DNA 손상과 미토콘드리아 기능 저하로 이어집니다.</div>
       </div>
       <div class="damage-card">
         
-        <div class="damage-organ">면역계</div>
+        <span class="damage-icon iconify" data-icon="lucide:shield"></span><div class="damage-organ">면역계</div>
         <div class="damage-text">면역세포를 공격해 면역 기능을 저하시킵니다. 만성 염증 반응 증가로 이어질 수 있습니다.</div>
       </div>
       <div class="damage-card">
         
-        <div class="damage-organ">간</div>
+        <span class="damage-icon iconify" data-icon="lucide:flask-conical"></span><div class="damage-organ">간</div>
         <div class="damage-text">간세포의 산화 손상을 유발하며 지방간, 간염증 등과 연관될 수 있습니다.</div>
       </div>
       <div class="damage-card">
         
-        <div class="damage-organ">세포 전반</div>
+        <span class="damage-icon iconify" data-icon="lucide:dna"></span><div class="damage-organ">세포 전반</div>
         <div class="damage-text">DNA 손상, 미토콘드리아 손상, 세포 기능 저하를 유발합니다. 세포 노화와 염증 반응 증가로 이어집니다.</div>
       </div>
     </div>
@@ -649,12 +650,12 @@
   <div class="cards-2 mb-32">
     <div class="card">
       
-      <div class="card-title">기존 S3 스캐너</div>
+      <span class="card-icon iconify" data-icon="lucide:scan"></span><div class="card-title">기존 S3 스캐너</div>
       <div class="card-body">라만 분광학(Raman Spectroscopy) 기술로 손바닥을 측정. 크고 무거운 장비로 수량이 제한적이었으며 이동성에 제약이 있었습니다.</div>
     </div>
     <div class="card" style="border-color:rgba(217,164,65,0.3); background:rgba(217,164,65,0.04);">
       
-      <div class="card-title">Prysm iO</div>
+      <span class="card-icon iconify" data-icon="lucide:sparkles"></span><div class="card-title">Prysm iO</div>
       <div class="card-body">빛을 활용한 새로운 측정 방식 + 빅데이터 + AI + 머신러닝 알고리즘 결합. 손가락 하나로 측정하는 손바닥 크기의 혁신 기기.</div>
     </div>
   </div>
@@ -663,17 +664,17 @@
   <div class="cards-3">
     <div class="card">
       
-      <div class="card-title">광학 측정 기술</div>
+      <span class="card-icon iconify" data-icon="lucide:scan-line"></span><div class="card-title">광학 측정 기술</div>
       <div class="card-body">기존 라만 분광학에서 한 단계 더 나아가, 빛을 활용해 피부를 측정하는 새로운 방법들을 연구 개발했습니다.</div>
     </div>
     <div class="card">
       
-      <div class="card-title">AI · 머신러닝 알고리즘</div>
+      <span class="card-icon iconify" data-icon="lucide:cpu"></span><div class="card-title">AI · 머신러닝 알고리즘</div>
       <div class="card-body">빅데이터와 인공지능, 머신러닝 알고리즘을 결합하여 빛으로 측정한 수많은 데이터를 정밀하게 분석합니다.</div>
     </div>
     <div class="card">
       
-      <div class="card-title">혈중 카로티노이드 반영</div>
+      <span class="card-icon iconify" data-icon="lucide:droplet"></span><div class="card-title">혈중 카로티노이드 반영</div>
       <div class="card-body">손가락 Prysm 점수는 실제 혈액 속 카로티노이드 수준과 매우 강한 상관관계를 보여, 전신 항산화 상태를 반영합니다.</div>
     </div>
   </div>
@@ -745,12 +746,12 @@
   <div class="cards-2 mb-32">
     <div class="card" style="border-color:rgba(217,164,65,0.25); background:rgba(217,164,65,0.04);">
       
-      <div class="card-title">얼마나 잘 먹고 있는가</div>
+      <span class="card-icon iconify" data-icon="lucide:salad"></span><div class="card-title">얼마나 잘 먹고 있는가</div>
       <div class="card-body">식단의 질을 직접적으로 반영합니다. 과일과 채소를 충분히, 다양하게 섭취하고 있는지 몸 안에서부터 보여줍니다.</div>
     </div>
     <div class="card" style="border-color:rgba(192,145,95,0.25); background:rgba(192,145,95,0.04);">
       
-      <div class="card-title">얼마나 많은 산화 스트레스와 싸우고 있는가</div>
+      <span class="card-icon iconify" data-icon="lucide:shield"></span><div class="card-title">얼마나 많은 산화 스트레스와 싸우고 있는가</div>
       <div class="card-body">체내 항산화 방어 능력을 보여줍니다. 자유 라디컬에 맞서는 슈퍼히어로(카로티노이드)가 얼마나 충분한지를 숫자로 확인합니다.</div>
     </div>
   </div>
@@ -849,22 +850,22 @@
   <div class="cards-4 mt-24">
     <div class="card">
       
-      <div class="card-title">현재 상태 측정</div>
+      <span class="card-icon iconify" data-icon="lucide:bar-chart-3"></span><div class="card-title">현재 상태 측정</div>
       <div class="card-body">지금 내 몸의 항산화 수준이 어디에 있는지 숫자로 확인합니다.</div>
     </div>
     <div class="card">
       
-      <div class="card-title">영양 섭취 확인</div>
+      <span class="card-icon iconify" data-icon="lucide:apple"></span><div class="card-title">영양 섭취 확인</div>
       <div class="card-body">식단이 체내에 실제로 어떤 변화를 만드는지 직접 확인합니다.</div>
     </div>
     <div class="card">
       
-      <div class="card-title">생활습관 점검</div>
+      <span class="card-icon iconify" data-icon="lucide:moon"></span><div class="card-title">생활습관 점검</div>
       <div class="card-body">수면, 운동, 자외선 노출 등 생활습관이 점수에 그대로 반영됩니다.</div>
     </div>
     <div class="card">
       
-      <div class="card-title">습관 변화 유도</div>
+      <span class="card-icon iconify" data-icon="lucide:repeat"></span><div class="card-title">습관 변화 유도</div>
       <div class="card-body">단 한 번의 측정이 아닙니다. 지속적 측정으로 건강한 행동을 습관으로 만들어 줍니다.</div>
     </div>
   </div>
@@ -893,12 +894,12 @@
     <div class="cards-2 mb-32">
       <div class="card">
         
-        <div class="card-title">1단계: 과학적 데이터 측정 연구</div>
+        <span class="card-icon iconify" data-icon="lucide:microscope"></span><div class="card-title">1단계: 과학적 데이터 측정 연구</div>
         <div class="card-body">통계적으로 합리적인 표본 집단을 대상으로 과학적 데이터를 측정하고, 건강 관련 데이터와 측정 기기 데이터 간의 상관관계를 분석했습니다. 본 컨퍼런스에서 발표된 연구입니다.</div>
       </div>
       <div class="card">
         
-        <div class="card-title">2단계: 소비자 데이터 검증</div>
+        <span class="card-icon iconify" data-icon="lucide:trending-up"></span><div class="card-title">2단계: 소비자 데이터 검증</div>
         <div class="card-body">실제 판매를 통해 얻은 소비자 데이터를 사용해 1단계 분석 결과를 검증하는 방식으로, 연구의 현실 적용 가능성을 높입니다.</div>
       </div>
     </div>
@@ -1158,42 +1159,42 @@
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">식물 영양소 11종 (기존 5종 → 대폭 확대)</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:leaf"></span>식물 영양소 11종 (기존 5종 → 대폭 확대)</div>
         <div class="upgrade-desc">포도종자 추출물·올리브나무잎 추출물(프랑스), 아티초크잎 추출물(스페인) 등 프리미엄 원료 소싱</div>
       </div>
     </div>
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">비타민 D 3배 · 셀레늄 3.7배 · 나이아신 3.6배 증량</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:zap"></span>비타민 D 3배 · 셀레늄 3.7배 · 나이아신 3.6배 증량</div>
         <div class="upgrade-desc">한국인에게 부족한 영양소 집중 강화. 비타민 B군 8종 전부 포함. 에너지 대사 급속 충전 설계.</div>
       </div>
     </div>
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">활성형 엽산 (이탈리아 소싱)</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:atom"></span>활성형 엽산 (이탈리아 소싱)</div>
         <div class="upgrade-desc">한국인·동아시아인 중 일반 엽산을 충분히 활용하지 못하는 유전적 특성을 가진 사람을 위해 활성형 채택. 호모시스테인 관리와 혈관 건강에 중요.</div>
       </div>
     </div>
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">해조분말 칼슘(영국) + 비타민 K2 최적 배합</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:bone"></span>해조분말 칼슘(영국) + 비타민 K2 최적 배합</div>
         <div class="upgrade-desc">칼슘이 실제 뼈에 잘 활용되도록 K2와의 균형을 고려. 마그네슘(독일), 비타민 D(스위스)와 함께 뼈 건강 최적 설계.</div>
       </div>
     </div>
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">국가별 최적 원료 소싱</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:globe"></span>국가별 최적 원료 소싱</div>
         <div class="upgrade-desc">영국·독일·스위스·미국·한국·이탈리아·프랑스·스페인 — 각 원료에 가장 적합한 국가에서 엄선. 경제성보다 품질을 우선.</div>
       </div>
     </div>
     <div class="upgrade-item">
       
       <div>
-        <div class="upgrade-title">고효율 압축 설계 — 8알 → 4알</div>
+        <div class="upgrade-title"><span class="iconify" style="color:var(--accent-gold);margin-right:8px;vertical-align:-3px;font-size:18px;" data-icon="lucide:pill"></span>고효율 압축 설계 — 8알 → 4알</div>
         <div class="upgrade-desc">섭취 편의성을 높이면서도 과학적 설계의 완성도는 유지. 15가지 식약처 인정 기능성: 뼈·갑상선·항산화·눈·피부·에너지·혈액·면역·신진대사 등.</div>
       </div>
     </div>
