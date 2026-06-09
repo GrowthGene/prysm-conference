@@ -283,6 +283,77 @@
   .mb-24 { margin-bottom: 24px; }
   .mb-32 { margin-bottom: 32px; }
 
+  /* ─── SPEAKER PHOTO (실사진) ─── */
+  .speaker-photo-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: 14px; margin-bottom: 20px; border: 1px solid var(--border); display: block; }
+  .photo-caption { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; text-align: center; margin-top: 10px; line-height: 1.5; }
+
+  /* ─── RESULT GROUPS (임상 결과 재설계) ─── */
+  .result-group { margin-bottom: 28px; }
+  .result-group-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .result-group-icon { width: 38px; height: 38px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0; }
+  .rg-psych .result-group-icon { background: rgba(155,111,255,0.12); border: 1px solid rgba(155,111,255,0.25); }
+  .rg-skin .result-group-icon { background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.22); }
+  .rg-bio .result-group-icon { background: rgba(62,232,200,0.12); border: 1px solid rgba(62,232,200,0.28); }
+  .result-group-title { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
+  .result-group-sub { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 2px; }
+
+  /* 결과 카드 (트렌드 그래픽 포함) */
+  .rc { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px; transition: border-color 0.2s, transform 0.2s; }
+  .rc:hover { border-color: rgba(78,159,255,0.3); transform: translateY(-2px); }
+  .rc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 16px; }
+  .rc-name { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.4; }
+  .rc-badge { font-size: 10px; font-weight: 700; font-family: 'DM Mono', monospace; padding: 4px 10px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em; }
+  .rc-badge.up { color: var(--accent-teal); background: rgba(62,232,200,0.1); border: 1px solid rgba(62,232,200,0.25); }
+  .rc-badge.down { color: var(--accent-rose); background: rgba(255,107,157,0.1); border: 1px solid rgba(255,107,157,0.25); }
+
+  /* 0→4→8주 타임라인 막대 (정성적 추세 도식) */
+  .tl { display: flex; align-items: flex-end; gap: 10px; height: 64px; padding-bottom: 20px; }
+  .tl-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; position: relative; }
+  .tl-bar { width: 100%; border-radius: 5px 5px 0 0; min-height: 6px; transition: height 0.3s; }
+  .tl-col .tl-wk { position: absolute; bottom: -18px; font-size: 9px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .tl-up .tl-bar { background: linear-gradient(to top, rgba(62,232,200,0.2), var(--accent-teal)); }
+  .tl-down .tl-bar { background: linear-gradient(to top, rgba(255,107,157,0.2), var(--accent-rose)); }
+  .rc-desc { font-size: 12px; color: #8a9cc8; line-height: 1.7; }
+
+  /* L*a*b* 색상 변화 바 */
+  .lab-bar { height: 10px; border-radius: 6px; position: relative; margin: 8px 0 6px; }
+  .lab-L { background: linear-gradient(90deg, #5a5a5a, #f0f0f0); }
+  .lab-a { background: linear-gradient(90deg, #c9485f, #f0d4da); }
+  .lab-b { background: linear-gradient(90deg, #d9d4c0, #f5c842); }
+  .lab-dot { position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid var(--bg); transform: translate(-50%,-50%); box-shadow: 0 0 0 1px rgba(255,255,255,0.3); }
+
+  /* 핵심 바이오마커 강조 카드 */
+  .bio-hero { background: linear-gradient(135deg, rgba(62,232,200,0.08), rgba(78,159,255,0.04)); border: 1px solid rgba(62,232,200,0.25); border-radius: 18px; padding: 28px; display: grid; grid-template-columns: 1fr 200px; gap: 28px; align-items: center; }
+  .bio-hero-graphic { display: flex; align-items: flex-end; gap: 12px; height: 110px; padding-bottom: 22px; }
+  .bio-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; position: relative; }
+  .bio-bar { width: 100%; border-radius: 6px 6px 0 0; background: linear-gradient(to top, rgba(62,232,200,0.25), var(--accent-teal)); min-height: 8px; }
+  .bio-col .bio-wk { position: absolute; bottom: -20px; font-size: 10px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .bio-col .bio-val { position: absolute; top: -18px; font-size: 10px; font-weight: 700; color: var(--accent-teal); font-family: 'DM Mono', monospace; }
+
+  /* R² 게이지 */
+  .gauge-wrap { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .gauge { --pct: 93; width: 130px; height: 130px; border-radius: 50%; flex-shrink: 0;
+    background: conic-gradient(var(--accent-teal) calc(var(--pct)*1%), var(--border) 0);
+    display: flex; align-items: center; justify-content: center; position: relative; }
+  .gauge::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; background: var(--surface); }
+  .gauge-inner { position: relative; z-index: 1; text-align: center; }
+  .gauge-num { font-size: 28px; font-weight: 900; font-family: 'DM Mono', monospace; color: var(--accent-teal); line-height: 1; }
+  .gauge-lbl { font-size: 10px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 4px; }
+
+  /* 배터리 비유 (건강한 노화 — 슬라이드 재현) */
+  .battery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .batt-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+  .batt-shell { width: 88px; height: 44px; border: 2px solid currentColor; border-radius: 7px; margin: 0 auto 14px; position: relative; padding: 4px; display: flex; align-items: center; }
+  .batt-shell::after { content: ''; position: absolute; right: -7px; top: 50%; transform: translateY(-50%); width: 4px; height: 16px; background: currentColor; border-radius: 0 2px 2px 0; }
+  .batt-fill { height: 100%; border-radius: 3px; }
+  .batt-card.good { color: var(--accent-teal); } .batt-card.bad { color: var(--accent-rose); }
+  .batt-pct { font-size: 22px; font-weight: 900; font-family: 'DM Mono', monospace; line-height: 1; margin-bottom: 4px; }
+  .batt-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .batt-desc { font-size: 12px; color: #8a9cc8; line-height: 1.6; }
+
+  /* 카로티노이드 효능 아이콘 박스 (damage-card에 아이콘) */
+  .damage-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 680px) {
     .speaker-grid { grid-template-columns: 1fr; }
@@ -299,6 +370,10 @@
     .upgrade-grid { grid-template-columns: 1fr; }
     .solution-mini-grid { grid-template-columns: 1fr; }
     .stat-num { font-size: 44px; }
+    .bio-hero { grid-template-columns: 1fr; gap: 20px; }
+    .bio-hero-graphic { height: 90px; }
+    .battery-grid { grid-template-columns: 1fr; }
+    .gauge-wrap { justify-content: center; }
   }
 </style>
 </head>
@@ -516,26 +591,32 @@
     <div class="label">자유 라디컬이 신체에 미치는 영향</div>
     <div class="damage-grid">
       <div class="damage-card">
+        <span class="damage-icon">🫀</span>
         <div class="damage-organ">심혈관계</div>
         <div class="damage-text">LDL 산화를 촉진해 심혈관 질환 위험을 높입니다. 산화된 LDL은 염증 반응을 유발하고 동맥 내 플라크 형성을 촉진해 심장과 혈관을 손상시킵니다.</div>
       </div>
       <div class="damage-card">
+        <span class="damage-icon">🧠</span>
         <div class="damage-organ">뇌·신경계</div>
         <div class="damage-text">신경세포 손상과 베타 아밀로이드 단백질 생성을 증가시켜 신경 퇴행성 질환과 관련될 수 있습니다.</div>
       </div>
       <div class="damage-card">
+        <span class="damage-icon">🧴</span>
         <div class="damage-organ">피부</div>
         <div class="damage-text">콜라겐과 탄력 섬유를 공격해 피부 처짐과 노화를 유발합니다. DNA 손상과 미토콘드리아 기능 저하로 이어집니다.</div>
       </div>
       <div class="damage-card">
+        <span class="damage-icon">🛡️</span>
         <div class="damage-organ">면역계</div>
         <div class="damage-text">면역세포를 공격해 면역 기능을 저하시킵니다. 만성 염증 반응 증가로 이어질 수 있습니다.</div>
       </div>
       <div class="damage-card">
+        <span class="damage-icon">⚗️</span>
         <div class="damage-organ">간</div>
         <div class="damage-text">간세포의 산화 손상을 유발하며 지방간, 간염증 등과 연관될 수 있습니다.</div>
       </div>
       <div class="damage-card">
+        <span class="damage-icon">🧬</span>
         <div class="damage-organ">세포 전반</div>
         <div class="damage-text">DNA 손상, 미토콘드리아 손상, 세포 기능 저하를 유발합니다. 세포 노화와 염증 반응 증가로 이어집니다.</div>
       </div>
@@ -628,8 +709,18 @@
     </div>
 
     <div class="stat-box mt-40">
-      <div class="stat-num prism-text">R² 0.93</div>
-      <div class="stat-desc">손가락 측정값과 손바닥 측정값의 상관계수 — 기존 S3 스캐너와 동등한 성능 최종 입증</div>
+      <div class="gauge-wrap">
+        <div class="gauge" style="--pct:93">
+          <div class="gauge-inner">
+            <div class="gauge-num">0.93</div>
+            <div class="gauge-lbl">R² 상관계수</div>
+          </div>
+        </div>
+        <div style="flex:1; min-width:220px; text-align:left;">
+          <div style="font-size:13px; color:var(--accent-teal); font-family:'DM Mono',monospace; letter-spacing:0.08em; margin-bottom:8px;">FINGER vs PALM CORRELATION</div>
+          <div class="stat-desc" style="text-align:left;">손가락 측정값과 손바닥 측정값의 상관계수(R²)가 <strong style="color:var(--accent-teal);">0.93</strong> — 완전 일치(1.0)에 매우 가까운 수치로, 기존 S3 스캐너와 동등한 성능을 최종 입증했습니다.</div>
+        </div>
+      </div>
     </div>
 
     <div class="mt-40">
@@ -682,6 +773,23 @@
     <h2 style="font-size:clamp(22px,4vw,34px); font-weight:900; letter-spacing:-0.02em; line-height:1.25; margin-bottom:20px;">PRISM 점수가 높은 사람은<br><span class="prism-text">생물학적으로 더 젊었다</span></h2>
 
     <p class="body-text">연대기적 나이(Chronological Age)는 실제 나이입니다. 생물학적 나이(Biological Age)는 몸이 실제로 얼마나 늙었는지를 의미합니다. 만약 생물학적 나이가 실제 나이보다 젊다면, 그 사람은 건강하게 나이 들고 있다는 뜻입니다.</p>
+
+    <p class="body-text">우리 몸은 배터리와 같습니다. 같은 나이라도 충전이 오래가는 몸이 있고, 금방 방전되는 몸이 있습니다. 그 차이를 만드는 것이 바로 항산화 역량입니다.</p>
+
+    <div class="battery-grid mt-32 mb-32">
+      <div class="batt-card good">
+        <div class="batt-shell"><div class="batt-fill" style="width:100%; background:var(--accent-teal);"></div></div>
+        <div class="batt-pct">100%</div>
+        <div class="batt-title">충전이 오래가는 몸</div>
+        <div class="batt-desc">항산화 슈퍼히어로(카로티노이드)가 충분 — 같은 나이라도 더 천천히 노화합니다.</div>
+      </div>
+      <div class="batt-card bad">
+        <div class="batt-shell"><div class="batt-fill" style="width:30%; background:var(--accent-rose);"></div></div>
+        <div class="batt-pct">30%</div>
+        <div class="batt-title">금방 방전되는 몸</div>
+        <div class="batt-desc">항산화 방어가 부족 — 산화 스트레스에 그대로 노출되어 더 빨리 노화합니다.</div>
+      </div>
+    </div>
 
     <div class="stat-box purple mt-32 mb-32">
       <div class="stat-num" style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">3–5</div>
@@ -810,9 +918,6 @@
       <p class="body-text mt-16">시험 제품에는 멀티비타민, 미네랄, 식물 유래 항산화 성분, 비타민 나이아신, 파이타테산 등 다양한 성분이 함유되어 있습니다.</p>
     </div>
 
-    <!-- 행사 화면 사진 -->
-    <img src="img-conference-screen.jpeg" alt="PRISM iO Science Conference 발표 화면" class="photo-full mb-32">
-
     <div class="label">7가지 심리 설문 평가 항목</div>
     <ul class="outcome-list mb-32">
       <li><strong>주관적 건강 상태</strong> — "현재 건강 상태는 어떻다고 생각하십니까?" (매우 나쁘다 ~ 매우 좋다)</li>
@@ -832,51 +937,114 @@
 <!-- 연구 결과 -->
 <div class="wrap section">
   <div class="label">임상 연구 결과 · Clinical Trial Results</div>
+  <h2 style="font-size:clamp(20px,3.5vw,30px); font-weight:900; letter-spacing:-0.02em; line-height:1.3; margin-bottom:12px;">8주 만에 <span class="gold-text">몸 안팎으로</span> 나타난 변화</h2>
+  <p class="body-text mb-32">주관적 설문(심리)과 기기 측정(피부색·카로티노이드)을 함께 분석한 결과, 시험군에서 통계적으로 유의한 개선이 확인되었습니다. 아래 도식은 0·4·8주 측정 시점의 <strong style="color:var(--text);">변화 방향</strong>을 나타냅니다.</p>
 
-  <div class="cards-2 mb-16">
-    <div class="result-card">
-      <div class="result-label">주관적 건강 상태</div>
-      <div class="result-value">8주 후 유의 증가</div>
-      <div class="result-body">제품 복용 8주 후 "현재 건강 상태는 어떻다고 생각하십니까"에 대한 응답 점수가 시험군에서 통계적으로 유의하게 증가. 라이프팩 옵티멀이 건강 상태에 긍정적 효과가 있음을 확인.</div>
+  <!-- 그룹 A · 주관적 건강·활력 -->
+  <div class="result-group rg-psych">
+    <div class="result-group-head">
+      <div class="result-group-icon">🧠</div>
+      <div>
+        <div class="result-group-title">몸으로 느낀 변화 — 주관적 건강·활력</div>
+        <div class="result-group-sub">Self-reported · 심리 설문 분석</div>
+      </div>
     </div>
-    <div class="result-card">
-      <div class="result-label">건강 변화</div>
-      <div class="result-value">8주 후 유의 증가</div>
-      <div class="result-body">"1년 전과 비교해 현재 전반적인 건강 변화는 어떻다고 생각하십니까"에 대한 응답도 8주 후 유의하게 증가. 건강 변화에 긍정적 효과 확인.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">활력 · 에너지 · 피로도</div>
-      <div class="result-value">8주 후 유의 증가</div>
-      <div class="result-body">기운·에너지·피로도·지침 관련 설문을 종합 분석한 결과, 8주 후 활력 지수가 시험군에서 유의하게 향상. 라이프팩 옵티멀이 에너지와 피곤함에 긍정적 효과.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">피부 윤기 · 매끄러움</div>
-      <div class="result-value">4·8주 모두 개선</div>
-      <div class="result-body">피부의 윤기와 매끄러움(부드러움)에 대한 자가 인식이 4주, 8주 두 시점 모두에서 유의미하게 개선. 젊어 보임 비율도 4·8주 후 높아짐.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">피부 밝기 (기기 측정 L*)</div>
-      <div class="result-value">4주 후 유의 개선</div>
-      <div class="result-body">스펙트로 포토미터로 측정한 뺨 부위 피부 밝기(L*)가 제품 복용 4주 후부터 유의하게 높아짐. 피부 밝기 개선에 긍정적 효과 확인.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">피부 붉은기 (기기 측정 a*)</div>
-      <div class="result-value">4주 후 유의 완화</div>
-      <div class="result-body">피부 붉은기(a*) 수치가 4주 후부터 유의하게 감소. 홍조 완화 및 항산화 효과와 연관. 케이스 사진에서도 뺨·이마 부위 붉은기 완화가 육안으로 확인.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">피부 노란기 (기기 측정 b*)</div>
-      <div class="result-value">8주 후 유의 증가</div>
-      <div class="result-body">아시아인에서 주로 측정되는 피부 노란기(b*)가 8주 후 유의하게 증가. 이는 주 성분인 카로티노이드 함량 증가로 해석됨 — 카로티노이드가 피부색에서도 발현.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-label">카로티노이드 수치 (PRISM iO)</div>
-      <div class="result-value">4·8주 모두 유의 증가</div>
-      <div class="result-body">손가락 PRISM iO 측정 결과, 제품 복용 4주·8주 후 체내 카로티노이드 함량이 모두 유의하게 증가. 항산화 역량이 실질적으로 향상되었음을 직접 확인.</div>
+    <div class="cards-3">
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">건강 자각</div><div class="rc-badge up">8주 ↑ 유의</div></div>
+        <div class="tl tl-up">
+          <div class="tl-col"><div class="tl-bar" style="height:30%"></div><span class="tl-wk">0주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:55%"></div><span class="tl-wk">4주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:90%"></div><span class="tl-wk">8주</span></div>
+        </div>
+        <p class="rc-desc">"현재 건강 상태가 어떻다고 생각하십니까"에 대한 응답 점수가 8주 후 유의하게 상승.</p>
+      </div>
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">1년 전 대비 변화</div><div class="rc-badge up">8주 ↑ 유의</div></div>
+        <div class="tl tl-up">
+          <div class="tl-col"><div class="tl-bar" style="height:32%"></div><span class="tl-wk">0주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:52%"></div><span class="tl-wk">4주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:86%"></div><span class="tl-wk">8주</span></div>
+        </div>
+        <p class="rc-desc">"1년 전과 비교한 전반적 건강 변화" 응답도 8주 후 긍정적으로 유의하게 증가.</p>
+      </div>
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">활력 · 에너지</div><div class="rc-badge up">8주 ↑ 유의</div></div>
+        <div class="tl tl-up">
+          <div class="tl-col"><div class="tl-bar" style="height:30%"></div><span class="tl-wk">0주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:58%"></div><span class="tl-wk">4주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:92%"></div><span class="tl-wk">8주</span></div>
+        </div>
+        <p class="rc-desc">기운·에너지·피로도 종합 분석 결과, 8주 후 활력 지수가 유의하게 향상.</p>
+      </div>
     </div>
   </div>
 
-  <div class="quote">
+  <!-- 그룹 B · 피부 변화 -->
+  <div class="result-group rg-skin">
+    <div class="result-group-head">
+      <div class="result-group-icon">✨</div>
+      <div>
+        <div class="result-group-title">눈에 보이는 변화 — 피부</div>
+        <div class="result-group-sub">자가 인식 + 스펙트로 포토미터 기기 측정</div>
+      </div>
+    </div>
+    <div class="cards-2 mb-16">
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">피부 윤기 · 매끄러움 <span style="color:var(--muted);font-weight:400;font-size:11px;">(자가 인식)</span></div><div class="rc-badge up">4·8주 ↑</div></div>
+        <div class="tl tl-up">
+          <div class="tl-col"><div class="tl-bar" style="height:28%"></div><span class="tl-wk">0주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:66%"></div><span class="tl-wk">4주</span></div>
+          <div class="tl-col"><div class="tl-bar" style="height:90%"></div><span class="tl-wk">8주</span></div>
+        </div>
+        <p class="rc-desc">윤기·매끄러움 자가 인식이 4·8주 모두 유의 개선. "젊어 보임" 응답 비율도 함께 상승.</p>
+      </div>
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">피부 밝기 <span style="color:var(--muted);font-weight:400;font-size:11px;">L* · 기기 측정</span></div><div class="rc-badge up">4주 ↑ 유의</div></div>
+        <div class="lab-bar lab-L"><div class="lab-dot" style="left:78%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:12px;"><span>어두움</span><span>밝음 →</span></div>
+        <p class="rc-desc">뺨 부위 피부 밝기(L*)가 4주 후부터 유의하게 상승. 측정값 기준 톤이 밝아짐.</p>
+      </div>
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">피부 붉은기 <span style="color:var(--muted);font-weight:400;font-size:11px;">a* · 기기 측정</span></div><div class="rc-badge down">4주 ↓ 완화</div></div>
+        <div class="lab-bar lab-a"><div class="lab-dot" style="left:34%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:12px;"><span>← 완화</span><span>붉은기</span></div>
+        <p class="rc-desc">붉은기(a*)가 4주 후부터 유의하게 감소. 홍조 완화·항산화 효과와 연관, 육안으로도 확인.</p>
+      </div>
+      <div class="rc">
+        <div class="rc-head"><div class="rc-name">피부 노란기 <span style="color:var(--muted);font-weight:400;font-size:11px;">b* · 기기 측정</span></div><div class="rc-badge up">8주 ↑ 유의</div></div>
+        <div class="lab-bar lab-b"><div class="lab-dot" style="left:82%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:12px;"><span>낮음</span><span>카로티노이드 →</span></div>
+        <p class="rc-desc">노란기(b*)가 8주 후 유의 증가. 카로티노이드 함량 증가가 피부색으로 발현된 것으로 해석.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 그룹 C · 핵심 바이오마커 -->
+  <div class="result-group rg-bio">
+    <div class="result-group-head">
+      <div class="result-group-icon">🎯</div>
+      <div>
+        <div class="result-group-title">핵심 지표 — 체내 카로티노이드</div>
+        <div class="result-group-sub">PRISM iO 직접 측정 · 항산화 역량</div>
+      </div>
+    </div>
+    <div class="bio-hero">
+      <div>
+        <div class="rc-badge up" style="margin-bottom:14px;">4·8주 모두 ↑ 유의 증가</div>
+        <p class="rc-desc" style="font-size:14px;">손가락 PRISM iO 측정 결과, 제품 복용 <strong style="color:var(--text);">4주·8주 모두 체내 카로티노이드 함량이 유의하게 증가</strong>했습니다. 주관적 건강감·피부 변화가 실제 항산화 역량 향상이라는 객관적 수치로 뒷받침되었습니다.</p>
+      </div>
+      <div class="bio-hero-graphic">
+        <div class="bio-col"><span class="bio-val">기준</span><div class="bio-bar" style="height:30%"></div><span class="bio-wk">0주</span></div>
+        <div class="bio-col"><span class="bio-val">↑</span><div class="bio-bar" style="height:68%"></div><span class="bio-wk">4주</span></div>
+        <div class="bio-col"><span class="bio-val">↑↑</span><div class="bio-bar" style="height:96%"></div><span class="bio-wk">8주</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="photo-caption" style="text-align:left;margin-top:18px;">※ 위 막대·인디케이터는 0·4·8주 측정 시점의 변화 방향을 나타낸 도식이며, 실제 측정치의 비율과는 다를 수 있습니다.</p>
+
+  <div class="quote mt-32">
     <p>"PRISM iO 측정이 심리 설문 결과, 피부색 밝기·붉은기 완화와 서로 상관관계가 있음을 확인했습니다. 카로티노이드 함량 증가가 실제로 체감할 수 있는 건강 변화로 이어진다는 것을 이번 연구가 보여줍니다."</p>
     <cite>— IC Korea 조정희 연구원</cite>
   </div>
