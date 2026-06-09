@@ -284,7 +284,7 @@
   .mb-32 { margin-bottom: 32px; }
 
   /* ─── SPEAKER PHOTO (실사진) ─── */
-  .speaker-photo-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: 14px; margin-bottom: 20px; border: 1px solid var(--border); display: block; }
+  .speaker-photo-img { width: 100%; height: auto; border-radius: 14px; margin-bottom: 16px; border: 1px solid var(--border); display: block; }
   .photo-caption { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; text-align: center; margin-top: 10px; line-height: 1.5; }
 
   /* ─── RESULT GROUPS (임상 결과 재설계) ─── */
@@ -357,7 +357,7 @@
   /* ─── RESPONSIVE ─── */
   @media (max-width: 680px) {
     .speaker-grid { grid-template-columns: 1fr; }
-    .speaker-card { display: none; }
+    .speaker-card { position: static; margin-top: 28px; max-width: 340px; }
     .cards-3 { grid-template-columns: 1fr; }
     .cards-4 { grid-template-columns: 1fr 1fr; }
     .cards-2 { grid-template-columns: 1fr; }
@@ -504,12 +504,10 @@
       </div>
 
       <div class="speaker-card">
-        <div class="speaker-photo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          현장 사진<br>추가 예정
-        </div>
+        <img src="img-helen-knaggs.jpeg" alt="Dr. Helen Knaggs 컨퍼런스 발표 현장" class="speaker-photo-img">
         <div class="speaker-card-name">Dr. Helen Knaggs</div>
         <div class="speaker-card-role">Nu Skin Enterprises<br>수석 과학 연구원 (NSE)</div>
+        <div class="photo-caption" style="text-align:left; margin-top:12px;">"뉴스킨 사이언스로 더 큰 가능성을 열어가세요"<br>PRISM iO Science Conference 2025</div>
       </div>
 
     </div>
